@@ -9,6 +9,7 @@ Create a docker container using docker-compose.xml in repository.
 4. In semaphore container
   - test mysql connection. :)  [mysql -h mysql -u root -p]
 5. semaphore setup
+```
   ~/>  semaphore --setup
  Hello! You will now be guided through a setup to:
    1. Set up configuration for a MySQL/MariaDB database
@@ -38,7 +39,7 @@ Create a docker container using docker-compose.xml in repository.
    }
 
  > Is this correct? (yes/no):
- 
+``` 
  6. playbook config check.
  7. Run semaphore
   semaphore -config /tmp/semaphore/semaphore_config.json
