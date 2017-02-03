@@ -1,0 +1,22 @@
+version: '2'
+services:
+  semaphore:
+    labels:
+      io.rancher.container.pull_image: always
+    tty: true
+    image: castawaylabs/semaphore:latest
+    logging: {}
+    links:
+    - mysql:mysql
+    stdin_open: true
+  mysql:
+    ports:
+    - 50009:3306/tcp
+    environment:
+      MYSQL_ROOT_PASSWORD: sktechx
+    labels:
+      io.rancher.container.pull_image: always
+    tty: true
+    image: mysql/mysql-server:latest
+    logging: {}
+    stdin_open: true
